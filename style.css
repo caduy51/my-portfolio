@@ -95,7 +95,7 @@ h2 {
 }
 
 #about-me h1 {
-  font-size: 65px;
+  font-size: 50px;
   margin-top: 90px;
   color: #257180;
 }
@@ -130,8 +130,12 @@ h2 {
   padding: 10px;
   width: 2in;
   font-size: 20px;
+}
+
+.skill:hover{
   box-shadow: 0 3px 10px gray;
 }
+
 
 .skill img {
   height: 35px;
@@ -324,6 +328,7 @@ button:hover {
   cursor: pointer;
 }
 
+/* Styling Hover Project name*/
 a {
   text-decoration: none;
 }
@@ -333,4 +338,9 @@ a {
   text-decoration: underline;
   background-color: black;
 }
+
+.skill > p:nth-child(2) {
+  font-weight: bold ;
+}
+
 
