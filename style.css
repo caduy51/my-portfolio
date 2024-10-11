@@ -31,12 +31,13 @@ body {
 }
 
 .topdiv {
-  float: right;
+  float: left;
   padding-right: 1cm;
+  margin-left: 50px;
 }
 
 .profile_name {
-  float: left;
+  float: right;
   padding-left: 2cm;
   /* Add the styles here */
   color: white
@@ -48,12 +49,13 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-right: 100px;
 }
 
 .contact_info img {
   width:25px;
   margin-right: 10px;
-  float:left;
+  float:right;
 }
 
 /* Titles */
@@ -342,5 +344,6 @@ a {
 .skill > p:nth-child(2) {
   font-weight: bold ;
 }
+
 
 
