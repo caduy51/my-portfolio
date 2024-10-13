@@ -39,12 +39,13 @@
           <div class="project-card">
             <h3>Overview</h3>
             <ul>
-              <li>Build a system collecting data from Binance and Coin Gecko Site.</li>
+              <li>The product offers useful information to help users identify potential investment opportunities, tracking top-performing coins, such as the highest gainers of the day or the best performers over the last week.</li>
+              <li>Designed to build a scalable, automated data pipeline that collects, processes, and visualizes cryptocurrency data from multiple sources.</li>
+              <li>The entire pipeline runs daily in a dockerized environment, ensuring ease of deployment across different platforms</li>
               <li>System stores raw data and transform it into usable format, serving data analytics.</li>
-              <li>It helps users to make decision.</li>
             </ul>
           </div>
-
+          <hr>
             <!-- Technology -->
           <div class="project-card">
             <h3>Used Tools</h3>
@@ -89,11 +90,46 @@
                 </div>
             </section>
             </div>
+            <hr>
 
         <div class="project-card">
             <h3>Data Flow</h3>
-            <img src="./img/architecture.png" width="1200px">
+            <img src="./img/architecture.png" width="900px">
+              <p style="font-size: 20px;">
+              <b>Environment Setup (Docker)</b>:<br>
+              All components (Airflow, Binance API, Coin Gecko bot, Minio, Spark, PostgreSQL, SuperSet) are containerized and run within a Docker environment to ensure portability and ease of deployment.<br><br>
+              <b>Data Ingestion</b><br>
+              Airflow orchestrates the pipeline, triggering two key tasks:<br>
+              Call the Binance API to fetch cryptocurrency data.<br>
+              Execute a web-scraping bot to collect additional data from Coin Gecko.<br>
+              Both data sources are collected and stored in Minio (object storage system) in a raw format.<br><br>
+              <b>Data Processing</b><br>
+              Apache Spark is triggered to read the raw data from Minio.<br>
+              Spark processes and cleans the data, performs necessary transformations, and saves the processed output back to Minio.<br><br>
+              <b>Data Loading</b><br>
+              The processed data from Minio is then loaded into PostgreSQL for structured storage and querying.<br><br>
+              <b>Data Visualization</b><br>
+              Apache Superset is connected to PostgreSQL, allowing users to visualize and explore the processed cryptocurrency data through interactive dashboards and reports.<br><br>
+            </p>
         </div>
+        <hr>
+        <div class="project-card">
+          <h3>Overview Dashboard</h3>
+          <img src="./img/superset-dashboard.png" width="900px">
+          <p style="font-size: 20px;">
+            The Cryptocurrency Performance Dashboard demonstrates a quick look of the top-performing cryptocurrencies, helping users quickly identify investment opportunities. <br><br>
+            
+            Key charts and features include: <br><br>
+
+            Top Gainers in a Day: This chart highlights the cryptocurrencies with the highest gains over the last 24 hours, providing a quick snapshot of short-term market winners. It allows users to stay informed about sudden price surges and take timely action.<br><br>
+
+            Top Gainers Over the Last Week: This chart displays the best-performing coins over the past seven days, helping users spot trends and sustained growth opportunities. By analyzing longer-term performance, investors can make more informed decisions about potential long-term investments.<br><br>
+
+            Top Gainers by Coin Category: This section groups cryptocurrencies into categories (such as DeFi, NFTs, or Layer 1 platforms) and shows the top gainers within each category. It enables users to track performance in specific sectors of the market, offering valuable insights into which segments are gaining traction.<br><br>
+
+
+          </p>
+      </div>
         <hr>
 
     </div>
