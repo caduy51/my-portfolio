@@ -124,7 +124,7 @@ h2 {
 }
 
 .skill {
-  border: 1px solid gray;
+  border: 2px dashed gray;
   display: block;
   border-radius: 25px;
   text-align: center;
@@ -135,7 +135,7 @@ h2 {
 }
 
 .skill:hover{
-  box-shadow: 0 3px 10px #257180;
+  box-shadow: 0 3px 10px gray;
 }
 
 
@@ -334,16 +334,14 @@ button:hover {
 a {
   text-decoration: none;
 }
+
 .project-card a:hover{
   color: white;
   font-weight: bold;
   text-decoration: underline;
-  background-color: black;
+  background-color: #257180;
 }
 
-.skill > p:nth-child(2) {
-  font-weight: bold ;
-}
 
 
 
