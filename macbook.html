@@ -3,13 +3,17 @@
   <head>
     <title>Crypto Project</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="./style.css"/>
+    <!-- <link rel="stylesheet" href="./style.css"/> -->
+    <link rel="stylesheet" href="blog.css">
     <script src="./script.js"></script>
+    <style>
+     
+    </style>
   </head>
-  
+
   <body>
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="header">
       <div id="home">
         <div class="profile_name">
           Ca Hoang Duy
@@ -27,35 +31,32 @@
           <a class="topmenu" href="./index.html">Home</a>
         </div>
       </div>
-
     </nav>
 
     <!-- Macbook Price Tracker -->
     <section class="projects" id="projects">
-        <h2>Macbook Price Tracker</h2>
+        <h1>Macbook Price Tracker</h1>
         <div style="clear:both;"></div>
 
         <div id="projects-container" class="projects-container">
             <div class="project-card">
-                <h3>Overview</h3>
-                <ul>
-                    <li> I created a dynamic price tracking system to monitor MacBook prices across three major Vietnamese retailers: The Gioi Di Dong, FPT Shop, and Di Dong Viet.</li>
-                    <li>The project uses web scraping techniques to automatically collect pricing data at regular intervals using cron jobs</li>
-                    <li>The data is stored and organized in Google Sheets, enabling seamless integration with Looker Studio for real-time data visualization and reporting.</li>
-                    <li>This system allows users to easily track price changes over time, compare offers across different stores, and make informed purchasing decisions</li>
-                    <li>The project demonstrates my skills in automation, data management, and visualization, with a focus on enhancing user experience.</li>
-                </ul>
+                <h2>Overview</h2>
+                <p>This is a price tracking system to monitor MacBook prices across three major Vietnamese retailers such as The Gioi Di Dong, FPT Shop, and Di Dong Viet.</p>
+                <p>The project uses web scraping techniques to automatically collect pricing data at regular intervals using cron jobs</p>
+                <p>The data is stored and organized in Google Sheets, enabling integration with Looker Studio for real-time data visualization and reporting.</p>
+                <p>This system allows users to easily track price changes over time, compare offers across different stores, and make informed purchasing decisions</p>
+                <p>The project demonstrates my skills in automation, data management, and visualization, with a focus on enhancing user experience.</p>
             </div>
-            <hr>
+            
             <div class="project-card">
-              <h3>Source code</h3>
+              <h2>Source code</h2>
               <ul>
-                <li><a href="https://github.com/caduy51/macbook-price-tracker" target="_blank">Click link</a></li>
+                <li><a href="https://github.com/caduy51/macbook-price-tracker" target="_blank">Link</a></li>
               </ul>
             </div>
 
             <div class="project-card">
-              <h3>Used Tools</h3>
+              <h2>Used Tools</h2>
               <!-- Skill used in the project -->
               <section id="skills">
                   <div style="clear:both;"></div>
@@ -87,57 +88,38 @@
                   </div>
               </section>
           </div>
-            <hr>
+            
             <div class="project-card">
-                <h3>Data Flow</h3>
-                <img src="./img/architecture-02.png" width="1000px" style="border: 1px solid black;">
-                <p style="font-size: 20px;">
-                    1. Web Crawling (Data Collection) <br>
-                    A web crawler is scheduled using a cron job to extract MacBook pricing data from the websites of The Gioi Di Dong, FPT Shop, and Di Dong Viet. The crawler scrapes the product details, including model, price, and availability.<br><br>
-                    
-                    2. Data Processing<br>
-                    After data is collected, it undergoes preprocessing, including cleaning, formatting, and ensuring consistency (e.g., handling different price formats, removing duplicates, and filtering out irrelevant data).<br><br>
-                    
-                    3. Data Loading to Google Sheets<br>
-                    The processed data is then automatically loaded into a designated Google Sheets document using the Google Sheets API. Each crawl appends the latest price data, creating a historical record for each MacBook model across the three stores.<br><br>
-                    
-                    4. Data Visualization with Looker Studio<br>
-                    Google Sheets is integrated with Looker Studio (formerly Google Data Studio) to visualize the pricing trends. Through this connection, Looker Studio generates real-time charts, graphs, and dashboards that display historical price changes, comparisons between retailers, and trends over time.<br><br>
-                    
-                    5. Monitoring<br>
-                    The entire process runs at scheduled intervals, producing logs to keep track of the data flow, ensuring that the Google Sheets and Looker Studio dashboards are automatically updated with prices. This allows users to access up-to-date visual insights and track price fluctuations over time.<br><br>
-                </p>
+                <h2>Data Flow</h2>
+                <img src="./img/architecture-02.png" style="border: 1px solid black;" class="work">
+                <h3>1. Data Collection</h3>
+                <p> A web crawler is daily scheduled using a crontab to extract MacBook pricing data from the websites of The Gioi Di Dong, FPT Shop, and Di Dong Viet. The crawler scrapes the product details, including models, price, RAM, SSD, and so on.</p>
+                
+                <h3>2. Data Processing</h3>
+                <p>After data is collected, it undergoes preprocessing, including cleaning, formatting, and ensuring consistency (e.g., handling different price formats, removing duplicates, and filtering out irrelevant data).</p>
+                
+                <h3>3. Data Loading to Google Sheets</h3>
+                <p>The processed data is then automatically loaded into a designated Google Sheets document using the Google Sheets API. Each crawl appends the latest price data, creating a historical record for each MacBook model across the three stores.</p>
+
+                <h3>4. Data Visualization with Looker Studio</h3>
+                <p>Google Sheets is integrated with Looker Studio (formerly Google Data Studio) to visualize the pricing trends. Through this connection, Looker Studio generates real-time charts, graphs, and dashboards that display historical price changes, comparisons between retailers, and trends over time.</p>
+                
+                <h3>5. Monitoring</h3>
+                <p>The entire process runs at scheduled intervals, producing logs to keep track of the data flow, ensuring that the Google Sheets and Looker Studio dashboards are automatically updated with prices. This allows users to access up-to-date visual insights and track price fluctuations over time.</p>
+
+
             </div>
-            <hr>
+            
             <div class="project-card">
-                <h3>Dashboard Overview</h3>
-                <img src="./img/dashboard.png" width="1000px">
-                <p style="font-size: 20px;">
-                    The dashboard allows users to select specific MacBook models and configurations (e.g., storage, RAM). <br>
-                    View their price changes over time across three major stores: The Gioi Di Dong, FPT Shop, and Di Dong Viet. <br>
-                    Users can easily compare prices from different retailers through interactive charts and graphs.  <br>
-                    Additionally, each entry includes a direct link to the product page at each store for more detailed information or purchase
-                </p>
+                <h2>Dashboard Overview</h2>
+                <img src="./img/dashboard.png" class="work">
+                <p>The dashboard allows users to select specific MacBook models and configurations (e.g., storage, RAM).</p>
+                <p>View their price changes over time across three major stores: The Gioi Di Dong, FPT Shop, and Di Dong Viet.</p>
+                <p>Users can easily compare prices from different retailers through interactive charts and graphs.</p>
+                <p> Additionally, each entry includes a direct link to the product page at each store for more detailed information or purchase</p>
             </div>
 
         </div>
     </section>
-
-    <div style="clear:both;"></div>
-
-    <div class="iconbutton">
-      <a href="#home">
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </a>
-    </div>
-
-    <div class="popup" id="popup" class="flex_center">
-      <img src="img/checkmark--outline.svg"/>
-      <h3>Thanks for leaving a recommendation</h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
   </body>
 </html>
