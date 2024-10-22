@@ -333,13 +333,16 @@ button:hover {
 /* Styling Hover Project name*/
 a {
   text-decoration: none;
+  color: black;
+  text-decoration: underline;
 }
 
 .project-card a:hover{
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  text-decoration: underline;
-  background-color: #257180;
+  /* text-decoration: underline; */
+  background-color: #000000;
 }
 
 
