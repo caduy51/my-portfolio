@@ -17,7 +17,7 @@ body {
 
 .topmenu {
   color: lightgray;
-  margin: 10px;
+  margin-left: 20px;
   padding: 20px;
   font-size: 20px;
   text-decoration:none;
@@ -99,7 +99,7 @@ h2 {
 #about-me h1 {
   font-size: 50px;
   margin-top: 90px;
-  color: #09576e;
+  color: #01202a;
 }
 
 #about-me p {
@@ -345,6 +345,10 @@ a {
   background-color: #000000;
 }
 
+.content {
+  /* width: 1200px; */
+  margin-left: 70px;
+}
 
 
 
