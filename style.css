@@ -1,5 +1,9 @@
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: serif;
+}
+
+h1, h2, h3 {
+  font-family: sans-serif;
 }
 
 /* Navigation Bar */
@@ -12,28 +16,36 @@ body {
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
-  height: 5mm;
+  height: 20px;
  }
 
 .topmenu {
+  display: inline-block;
+  width: 120px;
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+  /* border: 2px solid white;
+  border-radius: 20px; */
+  font-size: 19px;
   color: lightgray;
-  margin-left: 20px;
-  padding: 20px;
-  font-size: 20px;
-  text-decoration:none;
+  font-family: sans-serif;
+}
+
+.topmenu + .topmenu {
+  margin-left: 23px;
 }
 
 .topmenu:hover {
   color: white;
-  font-weight: bold;
   text-decoration: underline;
   /* Add the styles here */
 }
 
 .topdiv {
-  float: left;
+  /* float: left; */
   padding-right: 1cm;
-  margin-left: 50px;
+  margin-left: 130px;
 }
 
 .profile_name {
@@ -232,7 +244,7 @@ h2 {
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background-color: #257180;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;

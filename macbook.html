@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Crypto Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <!-- <link rel="stylesheet" href="./style.css"/> -->
     <link rel="stylesheet" href="blog.css">
@@ -28,7 +29,7 @@
         </div>
         </div>
         <div class="topdiv">
-          <a class="topmenu" href="./index.html">Home</a>
+          <a class="topmenu" href="./index.html"><i class="fa-regular fa-paper-plane"></i> Home</a>
         </div>
       </div>
     </nav>
@@ -43,11 +44,19 @@
                 <h2>Overview</h2>
                 <p>This is a price tracking system to monitor MacBook prices across three major Vietnamese retailers such as The Gioi Di Dong, FPT Shop, and Di Dong Viet.</p>
                 <p>The project uses web scraping techniques to automatically collect pricing data at regular intervals using cron jobs</p>
-                <p>The data is stored and organized in Google Sheets, enabling integration with Looker Studio for real-time data visualization and reporting.</p>
                 <p>This system allows users to easily track price changes over time, compare offers across different stores, and make informed purchasing decisions</p>
                 <p>The project demonstrates my skills in automation, data management, and visualization, with a focus on enhancing user experience.</p>
             </div>
-            
+
+            <div class="project-card">
+              <h2>Dashboard</h2>
+              <img src="./img/dashboard.png" style="border: 1px dotted black;" class="work">
+              <p>The dashboard allows users to select specific MacBook models and configurations (e.g., storage, RAM).</p>
+              <p>View their price changes over time across three major stores: The Gioi Di Dong, FPT Shop, and Di Dong Viet.</p>
+              <p>Users can easily compare prices from different retailers through interactive charts and graphs.</p>
+              <p> Additionally, each entry includes a direct link to the product page at each store for more detailed information or purchase</p>
+            </div>
+
             <div class="project-card">
               <h2>Source code</h2>
               <ul>
@@ -91,7 +100,7 @@
             
             <div class="project-card">
                 <h2>Data Flow</h2>
-                <img src="./img/architecture-02.png" style="border: 1px solid black;" class="work">
+                <img src="./img/architecture-02.png" style="border: 1px dotted black;" class="work">
                 <h3>1. Data Collection</h3>
                 <p> A web crawler is daily scheduled using a crontab to extract MacBook pricing data from the websites of The Gioi Di Dong, FPT Shop, and Di Dong Viet. The crawler scrapes the product details, including models, price, RAM, SSD, and so on.</p>
                 
@@ -106,19 +115,7 @@
                 
                 <h3>5. Monitoring</h3>
                 <p>The entire process runs at scheduled intervals, producing logs to keep track of the data flow, ensuring that the Google Sheets and Looker Studio dashboards are automatically updated with prices. This allows users to access up-to-date visual insights and track price fluctuations over time.</p>
-
-
             </div>
-            
-            <div class="project-card">
-                <h2>Dashboard Overview</h2>
-                <img src="./img/dashboard.png" class="work">
-                <p>The dashboard allows users to select specific MacBook models and configurations (e.g., storage, RAM).</p>
-                <p>View their price changes over time across three major stores: The Gioi Di Dong, FPT Shop, and Di Dong Viet.</p>
-                <p>Users can easily compare prices from different retailers through interactive charts and graphs.</p>
-                <p> Additionally, each entry includes a direct link to the product page at each store for more detailed information or purchase</p>
-            </div>
-
         </div>
     </section>
   </body>
